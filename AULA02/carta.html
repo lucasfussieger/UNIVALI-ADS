@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Carta do Leitor:</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+            /* Textura de papel usando gradientes para simular o grão */
+            background-color: #e8e6df;
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                radial-gradient(circle at 70% 60%, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                radial-gradient(circle at 40% 80%, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 90% 20%, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                linear-gradient(#ecebe4, #dcdad3);
+            background-size: 4px 4px, 6px 6px, 5px 5px, 7px 7px, 100% 100%;
+        }
+
+        .carta {
+            max-width: 780px;
+            margin: 30px auto;
+            padding: 60px 70px;
+            background-color: transparent;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: normal;
+            color: #1a1a1a;
+            margin-bottom: 60px;
+            letter-spacing: 1px;
+        }
+
+        .carta p {
+            color: #1a1a1a;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .corpo {
+            text-align: justify;
+            text-indent: 3em;
+        }
+
+        .assinatura {
+            text-align: right;
+            margin-top: 40px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <article class="carta">
+
+        <h1 class="titulo">Carta do Leitor:</h1>
+
+        <p>São Paulo, 22 de novembro de 2008.</p>
+
+        <p>À revista Veja,</p>
+
+        <p class="corpo">
+            Gostaria de parabenizar a equipe de redação pela excelente entrevista.
+            Eu, como homem e responsável pelo sustento do lar, concordo plenamente
+            com os argumentos apresentados pelo historiador Van Creveld. Nós homens
+            carregamos nos ombros uma carga imensa, seja por motivos de ordem
+            financeira ou familiar. E, por isso, com certeza, sofremos muito mais
+            com o estresse do que as mulheres que desfrutam de paz e tranquilidade
+            em seus lares.
+        </p>
+
+        <p class="assinatura">
+            Atenciosamente,<br>
+            José Antônio Souza
+        </p>
+
+    </article>
+</body>
+</html>

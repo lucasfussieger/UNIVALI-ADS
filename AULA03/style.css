@@ -1,0 +1,84 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Página */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 60px 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #333;
+}
+
+.conteudo {
+    max-width: 600px;
+    padding: 30px 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.conteudo h1 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.conteudo p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Paginação */
+.paginacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Classe nos itens — estilo base dos links */
+.paginacao-item a {
+    display: block;
+    padding: 8px 14px;
+    background-color: #fff;
+    color: #337ab7;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+}
+
+/* Combinador descendente: hover nos links */
+.paginacao-item a:hover {
+    background-color: #eee;
+    color: #23527c;
+}
+
+/* Classe modificadora para o item ativo (mesmo visual do hover) */
+.paginacao-item.ativo a {
+    background-color: #eee;
+    color: #23527c;
+}
+
+/* Combinador de irmão adjacente: remove borda duplicada entre itens */
+.paginacao-item + .paginacao-item a {
+    border-left: 0;
+}
+
+/* Combinador filho direto: cantos arredondados no primeiro e no último */
+.paginacao-lista > .paginacao-item:first-child a {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.paginacao-lista > .paginacao-item:last-child a {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}

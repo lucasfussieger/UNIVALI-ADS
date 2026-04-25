@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #2e1e1e 0%, #4e1b1b 50%, #2e1a1a 100%);
+}
+
+.calculadora {
+    width: 100%;
+    max-width: 360px;
+    background-color: #1f1717;
+    border-radius: 28px;
+    padding: 24px;
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        0 0 80px rgba(162, 75, 75, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Display */
+.display {
+    background-color: #0d0d14;
+    border-radius: 16px;
+    padding: 24px 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.display-expressao {
+    color: #9e8a8a;
+    font-size: 1.1rem;
+    font-weight: 400;
+    min-height: 1.4em;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.display-resultado {
+    color: #ffffff;
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 6px;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 1.1;
+}
+
+/* Teclas */
+.teclas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.tecla {
+    height: 64px;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-family: inherit;
+    user-select: none;
+}
+
+.tecla:active {
+    transform: scale(0.95);
+}
+
+.tecla-numero {
+    background: linear-gradient(145deg, #3a2a2a, #2d1f1f);
+    color: #ffffff;
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.tecla-numero:hover {
+    background: linear-gradient(145deg, #4a3535, #3a2929);
+}
+
+.tecla-acao {
+    background: linear-gradient(145deg, #5e4a4a, #4e3a3a);
+    color: #ffffff;
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.tecla-acao:hover {
+    background: linear-gradient(145deg, #6e5656, #5e4646);
+}
+
+.tecla-operador {
+    background: linear-gradient(145deg, #ea6666, #d45454);
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    box-shadow:
+        0 4px 12px rgba(234, 102, 102, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.tecla-operador:hover {
+    background: linear-gradient(145deg, #f57272, #e06060);
+}
+
+.tecla-operador.ativo {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    color: #ea6666;
+    box-shadow:
+        0 4px 12px rgba(255, 255, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.tecla-igual {
+    background: linear-gradient(145deg, #a24b4b, #853d3d);
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    box-shadow:
+        0 4px 12px rgba(162, 75, 75, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.tecla-igual:hover {
+    background: linear-gradient(145deg, #b85959, #974646);
+}
+
+.tecla-zero {
+    grid-column: span 2;
+    border-radius: 16px;
+}
+
+/* Responsivo */
+@media (max-width: 380px) {
+    .calculadora {
+        padding: 18px;
+    }
+
+    .tecla {
+        height: 56px;
+        font-size: 1.2rem;
+    }
+
+    .display-resultado {
+        font-size: 2.2rem;
+    }
+}
